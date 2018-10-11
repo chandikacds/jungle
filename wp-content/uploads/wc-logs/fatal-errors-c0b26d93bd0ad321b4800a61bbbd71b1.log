@@ -1,0 +1,80 @@
+2018-06-30T15:09:41+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 937 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(937): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+
+2018-06-30T15:10:12+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 937 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(937): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+
+2018-06-30T15:24:25+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 937 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(937): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+
+2018-06-30T15:25:10+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 937 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(937): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+
+2018-06-30T15:32:23+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 937 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(937): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+
+2018-06-30T15:36:55+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 937 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(937): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+
+2018-06-30T15:43:12+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 937 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(937): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+
+2018-06-30T15:49:22+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php on line 939 and exactly 2 expected in /home/www/demo.jungle.lk/wp-includes/wp-db.php:1222
+Stack trace:
+#0 /home/www/demo.jungle.lk/wp-content/themes/jungle/lib/woocommerce.php(939): wpdb->prepare('SELECT category...')
+#1 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(286): assignCategoryList('')
+#2 /home/www/demo.jungle.lk/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/www/demo.jungle.lk/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home/www/demo.jungle.lk/wp-admin/admin-ajax.php(99): do_action('wp_ajax_assignC...')
+#5 {main}
+  thrown
+

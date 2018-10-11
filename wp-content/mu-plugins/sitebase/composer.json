@@ -1,0 +1,16 @@
+{
+      "name": "damngraphic/sitebase",
+      "type": "wordpress-muplugin",
+      "package": {
+        "name": "damngraphic/sitebase",
+        "version": "master",
+        "type": "wordpress-muplugin",
+        "source": {
+	        "url": "https://damngraphic@bitbucket.org/damngraphic/sitebase.git",
+	        "type": "git"
+	    },
+        "require" : {
+          "composer/installers": "v1.0.25"
+        }
+      }
+}
