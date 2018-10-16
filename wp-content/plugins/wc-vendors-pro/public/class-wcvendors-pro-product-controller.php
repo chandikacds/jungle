@@ -1961,14 +1961,25 @@ class WCVendors_Pro_Product_Controller {
 			$outputCondition = get_post_meta($product->get_id(),'wcv_custom_product_conditions');
 			$Condition = productConditions($outputCondition[0]);
 
-
 			$product_price = ( version_compare( WC_VERSION, '2.7', '<' ) ) ? $product->get_display_price() : wc_get_price_to_display( $product );
 			$pricelable = "";
 		    $displayvalue = wc_get_price_to_display( $product );
+		    $regularPrice = $product->get_regular_price();
+		    $rootbeer = (float) $regularPrice;
+		    // var_dump($displayvalue, $rootbeer);
+
+		   
+
 			if(empty($displayvalue)){
                $pricelable = wc_price( wc_get_price_to_display( $product ) . $product->get_price_suffix() );
 			}else{
-				$pricelable = "<span class='changefont'>".wc_price( $product->get_regular_price() . $product->get_price_suffix() )."</span><br />".wc_price( wc_get_price_to_display( $product ) . $product->get_price_suffix() );
+				if(wc_price( $product->get_regular_price() . $product->get_price_suffix() ) === wc_price( wc_get_price_to_display( $product ) . $product->get_price_suffix() )){
+
+					$pricelable = wc_price( wc_get_price_to_display( $product ) . $product->get_price_suffix() );
+			    }else{
+			      $pricelable = "<span class='changefont'> ".wc_price( $product->get_regular_price() . $product->get_price_suffix() )."</span><br />".wc_price( wc_get_price_to_display( $product ) . $product->get_price_suffix() );
+			    }
+			
 			}
 			
 			$pricelable .="<br />". $Condition;
@@ -1982,8 +1993,11 @@ class WCVendors_Pro_Product_Controller {
 			$new_row->price = $pricelable;
 			$new_row->stock         = $product->get_stock_quantity(); 
 
-			$outputserviceID = get_post_meta($product->get_id(),'productServicesMeta');
+			$outputserviceID = get_post_meta($product->get_id(),'productServicesMeta',true);
+			//var_dump($outputserviceID);
+			$outputserviceID = explode(",", $outputserviceID);
 			$Servicesar = array();
+			$ServicesarTitle = array();
 			foreach ($outputserviceID as $key => $value) {
 				if (!empty($value)) {
 					$Servicesar[]=get_the_title($value);
@@ -1993,7 +2007,9 @@ class WCVendors_Pro_Product_Controller {
 				
 			}
 
-			$Servicesstr = implode(",", $Servicesar);
+
+
+			$Servicesstr = implode(" ,<br> ", $Servicesar);
 			$new_row->Services      = $Servicesstr; 
 
 			$new_row->status 		= sprintf('%s <br /> %s <br /> %s', WCVendors_Pro_Product_Controller::product_status( $row->post_status ), date_i18n( get_option( 'date_format' ), strtotime( $row->post_date ) ), $stock_status_label . $stock_status );

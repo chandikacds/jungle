@@ -194,7 +194,7 @@ $variations_options 	= (array) WC_Vendors::$pv_options->get_option( 'hide_produc
 							<div class="control"> 
 								<input type="text" class="sale_price_dates_to wcv-datepicker" name="variable_sale_price_dates_to[<?php echo $loop; ?>]" value="<?php echo ! empty( $_sale_price_dates_to ) ? date_i18n( 'Y-m-d', $_sale_price_dates_to ) : ''; ?>" placeholder="<?php echo esc_attr_x('To&hellip;', 'placeholder', 'wcvendors-pro') ?> YYYY-MM-DD" maxlength="10" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" />
 							</div>
-							<p class="tip"><a href="#" class="cancel_sale_schedule" style="display:none"><?php _e( 'Cancel schedule', 'wcvendors-pro' ); ?></a></p>
+							<p class="tip"><a href="#" class="cancel_sale_schedule" ><?php _e( 'Cancel schedule', 'wcvendors-pro' ); ?></a></p>
 						</div>
 					</div>
 			</div>
@@ -204,7 +204,7 @@ $variations_options 	= (array) WC_Vendors::$pv_options->get_option( 'hide_produc
 			<?php do_action( 'wcv_product_variation_before_stock' ); ?>	
 
 			<?php if ( 'yes' == get_option( 'woocommerce_manage_stock' ) ) : ?>
-			<div class="wcv-cols-group wcv-horizontal-gutters show_if_variation_manage_stock" style="display: none;">
+			<div class="wcv-cols-group wcv-horizontal-gutters show_if_variation_manage_stock" >
 				<div class="all-50">
 				<?php if (! $variations_options[ 'stock_qty' ] ) : ?>
 					<div class="control-group">
@@ -234,7 +234,7 @@ $variations_options 	= (array) WC_Vendors::$pv_options->get_option( 'hide_produc
 			</div>
 			<?php endif; ?>
 
-			<div class="wcv-cols-group wcv-horizontal-gutters show_if_variation_manage_stock" style="display: none;">
+			<div class="wcv-cols-group wcv-horizontal-gutters show_if_variation_manage_stock" >
 				<div class="all-100">
 				<?php if (! $variations_options[ 'stock_status' ] ) : ?>
 					<div class="control-group">
@@ -265,7 +265,8 @@ $variations_options 	= (array) WC_Vendors::$pv_options->get_option( 'hide_produc
 							<div class="control-group">
 								<label><?php echo __( 'Weight', 'wcvendors-pro' ) . ' (' . esc_html( get_option( 'woocommerce_weight_unit' ) ) . '):'; ?> <?php //echo wc_help_tip( __( 'Enter a weight for this variation or leave blank to use the parent product weight.', 'wcvendors-pro' ) ); ?></label>
 								<div class="control"> 
-									<input type="text" size="5" name="variable_weight[<?php echo $loop; ?>]" class="variable_weight" value="<?php if ( isset( $_weight ) ) echo esc_attr( $_weight ); ?>" placeholder="<?php echo esc_attr( $parent_data['weight'] ); ?>" class="wc_input_decimal" />
+								<!-- 	<input type="text" size="5" name="variable_weight[<?php echo $loop; ?>]" class="variable_weight" value="<?php if ( isset( $_weight ) ) echo esc_attr( $_weight ); ?>" placeholder="<?php echo esc_attr( $parent_data['weight'] ); ?>" class="wc_input_decimal" /> -->
+								<input type="text" size="5" name="variable_weight[<?php echo $loop; ?>]" class="variable_weight" id="<?php echo esc_html( $variation_data[ 'id' ] ); ?>" value="<?php if ( isset( $_weight ) ) echo esc_attr( $_weight ); ?>" placeholder="0" class="wc_input_decimal" />
 								</div>
 							</div>
 						</div>

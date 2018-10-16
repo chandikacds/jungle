@@ -1090,7 +1090,11 @@ class WC_Form_Handler {
 
 				       $phone_num = $userlogin;
 
-				       $message ='Your%20Password%20reset%20PIN%20is%20'.$keyid.'.%20www.jungle.lk%20+94761%20880%20123';
+				       // $message ='Your%20Password%20reset%20PIN%20is%20'.$keyid.'.%20www.jungle.lk%20+94761%20880%20123';
+
+				       $message ='A%20password%20reset%20request%20has%20been%20made%20to%20your%20account%20at%20www.jungle.lk.%20The%20PIN%20is%20'.$keyid.'%20Please%20ignore%20if%20you%20did%20not%20request%20it%20or%20contact%20support%20on%20+94761880123';
+
+				       
 
 				      sendSMS($phone_num,$message,1,1);
 				}

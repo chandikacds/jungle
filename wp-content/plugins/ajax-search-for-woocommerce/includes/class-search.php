@@ -200,12 +200,24 @@ $qrystr3 = '';
 
 //var_dump($qrystr3);
 global $wpdb;
+$searchnew = explode(" ", $search);
+
+$searchkeyarray = array();
+foreach ($searchnew AS $key => $value) {
+
+   $searchkeyarray[] = "p.post_title LIKE '%$value%'";
+   // $searchkeyarray[] = "(p.post_title LIKE '%$value%')";
+    //( name LIKE '%Wong%')
+}
+$searchstr = implode(' AND ', $searchkeyarray);
+//$searchstr = implode(' OR ', $searchkeyarray);
+
 // The SQL query
 $products = $wpdb->get_results( "SELECT p.post_title, p.ID 
     FROM wp_posts as p 
     LEFT JOIN wp_postmeta as pm ON p.ID = pm.post_id 
     WHERE 
-    ( p.post_title LIKE '%$search%' OR p.ID = '$postid' $qrystr $qrystr2 $qrystr3) 
+    ( $searchstr OR p.ID = '$postid' $qrystr $qrystr2 $qrystr3) 
     AND pm.meta_key NOT LIKE  'jungl_visibility'
     AND p.post_type LIKE 'product'  
     AND p.post_status LIKE 'publish'
